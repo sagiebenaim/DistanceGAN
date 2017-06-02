@@ -2,8 +2,6 @@
 
 Pytorch implementation of "One-Sided Unsupervised Domain Mapping". Implementation is based on the architecture of [DiscoGAN](https://github.com/SKTBrain/DiscoGAN) and [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). 
 
-<img src="images/distance_correlation.png" width="1100px">
-
 Prerequisites
 --------------
 - Python 2.7
