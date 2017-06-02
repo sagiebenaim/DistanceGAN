@@ -14,7 +14,7 @@ Prerequisites
 - [visdom](https://github.com/facebookresearch/visdom)
 - [dominate](https://github.com/Knio/dominate)
 
-## Models based on DiscoGAN architecture
+## Distance Model based on DiscoGAN architecture
 
 ### Download dataset
 Download dataset [edges2shoes, edges2handbags, facecurb]:
@@ -61,9 +61,13 @@ python ./discogan_based_models/distance_gan_angle_pairing_model.py --task_no ame
 Add following flags to python command as follows:
 
 To train from A to B only: --model_arch=distance_A_to_B. To train from B to A only: --model_arch=distance_B_to_A. 
+
 To add reconstruction/cycle loss to distance loss: --use_reconst_loss.
+
 To use self distance instead of regular distance:--use_self_distance.
+
 To avoid normalizing distances: --unnormalized_distances.
+
 To change number of items used for expectation and std calculation: --max_items=NUM.
 
 Additional options can be found in ./discogan_based_models/discogan_based_options/options.py
@@ -102,7 +106,7 @@ Car to Head:
 
 <img src="images/car_to_face.jpg" width="600px">
 
-## Models based on DiscoGAN architecture
+## Distance Model based on CycleGAN architecture
 
 ### Horse to Zebra:
 Dataset: python datasets/download.py horse2zebra 
@@ -115,11 +119,15 @@ Results saved in ./results/horse2zebra_distancegan/latest_test/index.html.
 Loss results and plots: 'run python -m visdom.server' and navigate to http://localhost:8097
 (For other options see [pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix))
 
-Options:
+### Options:
 To train from A to B only: --A_to_B.
+
 To train from B to A only: --B_to_A.
+
 To add reconstruction/cycle loss to distance loss: --use_cycle_loss.
+
 To change weights of distance loss: --lambda_distance_A=NUM, --lambda_distance_B=NUM.
+
 --use_self_distance, --unnormalized_distances, --max-items=NUM are as above. 
 
 Additional options can be found in ./cyclegan_based_models/cyclegan_based_options.
