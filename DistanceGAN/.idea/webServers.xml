@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="11caf112-f378-4096-a8ff-a9c06f78c9f3" name="beast10.tau.ac.il" url="http://beast10.tau.ac.il">
+        <fileTransfer host="beast10.tau.ac.il" port="22" rootFolder="/home/sagieb" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
