@@ -1,14 +1,14 @@
 import os
 import os
 
-from cyclegan_based_models.cyclegan_based_options.test_options import TestOptions
+from cyclegan_arch.cyclegan_arch_options.test_options import TestOptions
 
 opt = TestOptions().parse()  # set CUDA_VISIBLE_DEVICES before import torch
 
-from cyclegan_based_models.data.data_loader import CreateDataLoader
-from cyclegan_based_models.models import create_model
-from cyclegan_based_models.util.visualizer import Visualizer
-from cyclegan_based_models.util import html
+from cyclegan_arch.data.data_loader import CreateDataLoader
+from cyclegan_arch.models import create_model
+from cyclegan_arch.util.visualizer import Visualizer
+from cyclegan_arch.util import html
 
 opt.nThreads = 1   # test code only supports nThreads=1
 opt.batchSize = 1  #test code only supports batchSize=1

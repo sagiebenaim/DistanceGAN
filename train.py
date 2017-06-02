@@ -1,10 +1,10 @@
 import time
-from cyclegan_based_models.cyclegan_based_options.train_options import TrainOptions
+from cyclegan_arch.cyclegan_arch_options.train_options import TrainOptions
 opt = TrainOptions().parse()  # set CUDA_VISIBLE_DEVICES before import torch
 
-from cyclegan_based_models.data.data_loader import CreateDataLoader
-from cyclegan_based_models.models import create_model
-from cyclegan_based_models.util.visualizer import Visualizer
+from cyclegan_arch.data.data_loader import CreateDataLoader
+from cyclegan_arch.models import create_model
+from cyclegan_arch.util.visualizer import Visualizer
 
 data_loader = CreateDataLoader(opt)
 dataset = data_loader.load_data()
