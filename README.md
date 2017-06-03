@@ -145,6 +145,9 @@ SVHN to MNIST:
 
 <img src="images/mnist_to_svhn.png" width="600px">
 
+## Acknowledgements
+This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant ERC CoG 725974).
+
 
 
 
