@@ -216,7 +216,7 @@ class DistanceGAN(DiscoGAN):
                     self.recon_loss_A = self.recon_criterion(ABA, A)
                     self.recon_loss_B = self.recon_criterion(BAB, B)
 
-                if self.args.use_self_distance:
+                if not self.args.use_self_distance:
                     self.loss_distance_A, self.loss_distance_B = self.get_distance_losses(A, B, AB, BA)
                 else:
                     self.loss_distance_A, self.loss_distance_B = self.get_self_distances(A, B, AB, BA)
