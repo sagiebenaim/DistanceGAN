@@ -27,33 +27,33 @@ Then extract into ./datasets folder.
 
 ### CelebA training (Male to Female, Blond to Black hair, With Eyeglasses to Without Eyeglasses)
 Male to Female:
-python ./discogan_based_models/distance_gan_model.py --task_name='celebA' --style_A='Male'
+python ./discogan_arch/distance_gan_model.py --task_name='celebA' --style_A='Male'
 
 Blond to Black hair:
-python ./discogan_based_models/distance_gan_model.py --task_name='celebA' --task_name='celebA' --style_A='Blond_Hair' --style_B='Black_Hair' --constraint='Male' --constraint_type=-1
+python ./discogan_arch/distance_gan_model.py --task_name='celebA' --task_name='celebA' --style_A='Blond_Hair' --style_B='Black_Hair' --constraint='Male' --constraint_type=-1
 
 Eyeglasses to Without Eyeglasses:
-python ./discogan_based_models/distance_gan_model.py --task_name='celebA' --style_A='Eyeglasses' --constraint='Male' --constraint_type=1
+python ./discogan_arch/distance_gan_model.py --task_name='celebA' --style_A='Eyeglasses' --constraint='Male' --constraint_type=1
 
 ### Edges, Handbags and Shoes (Edges to Shoes, Edges to Handbags, Shoes to Handbags)
 Edges to Shoes:
-python ./discogan_based_models/distance_gan_model.py --task_name='edges2shoes' --num_layers=3
+python ./discogan_arch/distance_gan_model.py --task_name='edges2shoes' --num_layers=3
 
 Edges to Handbags:
-python ./discogan_based_models/distance_gan_model.py --task_name='edges2handbags' --num_layers=3
+python ./discogan_arch/distance_gan_model.py --task_name='edges2handbags' --num_layers=3
 
 Shoes to Handbags:
-python ./discogan_based_models/distance_gan_model.py --task_name='handbags2shoes' --starting_rate=0.5
+python ./discogan_arch/distance_gan_model.py --task_name='handbags2shoes' --starting_rate=0.5
 
 ### Car, Head/Face (Car to Car, Car to Head/Face, Head/Face to Head/Face)
 Car to Car:
-python ./discogan_based_models/distance_gan_angle_pairing_model.py --task_name='car2car'
+python ./discogan_arch/distance_gan_angle_pairing_model.py --task_name='car2car'
 
 Head/Face to Head/Face:
-python ./discogan_based_models/distance_gan_angle_pairing_model.py --task_name='face2face'
+python ./discogan_arch/distance_gan_angle_pairing_model.py --task_name='face2face'
 
 Car to Head/Face:
-python ./discogan_based_models/distance_gan_angle_pairing_model.py --task_no ame='car2face'
+python ./discogan_arch/distance_gan_angle_pairing_model.py --task_no ame='car2face'
 
 ### Options
 Add following flags to python command as follows:
@@ -68,7 +68,7 @@ To avoid normalizing distances: --unnormalized_distances.
 
 To change number of items used for expectation and std calculation: --max_items=NUM.
 
-Additional options can be found in ./discogan_based_models/discogan_based_options/options.py
+Additional options can be found in ./discogan_arch/discogan_based_options/options.py
 
 ### Sample Results
 
@@ -128,10 +128,10 @@ To change weights of distance loss: --lambda_distance_A=NUM, --lambda_distance_B
 
 --use_self_distance, --unnormalized_distances, --max-items=NUM are as above. 
 
-Additional options can be found in ./cyclegan_based_models/cyclegan_based_options.
+Additional options can be found in ./cyclegan_arch/cyclegan_based_options.
 
 ### MNIST to SVHN:
-python ./cyclegan_based_models/mnist_to_svhn/main.py --use_distance_loss=True --use_reconst_loss=False --use_self_distance=False
+python ./cyclegan_arch/mnist_to_svhn/main.py --use_distance_loss=True --use_reconst_loss=False --use_self_distance=False
 
 Change above flags as required.
 
