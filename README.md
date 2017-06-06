@@ -1,6 +1,6 @@
 # DistanceGAN
 
-Pytorch implementation of "One-Sided Unsupervised Domain Mapping" ([arxiv](https://arxiv.org/abs/1706.00826)). The implementation is based on the architectures of [DiscoGAN](https://github.com/SKTBrain/DiscoGAN) and [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). 
+Pytorch implementation of "One-Sided Unsupervised Domain Mapping" ([arxiv](https://arxiv.org/abs/1706.00826)). The implementation is based on the architectures of both [DiscoGAN](https://github.com/SKTBrain/DiscoGAN) and [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). 
 
 Prerequisites
 --------------
