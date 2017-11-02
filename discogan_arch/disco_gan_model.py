@@ -53,7 +53,10 @@ class DiscoGAN(object):
         losses = 0
         for real_feat, fake_feat in zip(real_feats, fake_feats):
             l2 = (real_feat.mean(0) - fake_feat.mean(0)) * (real_feat.mean(0) - fake_feat.mean(0))
-            loss = self.feat_criterion(l2, Variable(torch.ones(l2.size())).cuda())
+            l2_label = Variable(torch.ones(l2.size()))
+            if self.cuda:
+                l2_label = l2_label.cuda()
+            loss = self.feat_criterion(l2, l2_label)
             losses += loss
 
         return losses
