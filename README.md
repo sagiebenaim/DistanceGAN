@@ -68,7 +68,7 @@ To avoid normalizing distances: --unnormalized_distances.
 
 To change number of items used for expectation and std calculation: --max_items=NUM.
 
-Additional options can be found in ./discogan_arch/discogan_based_options/options.py
+Additional options can be found in ./discogan_arch/discogan_arch_options/options.py
 
 ### Sample Results
 
