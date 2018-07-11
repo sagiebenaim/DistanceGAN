@@ -90,7 +90,7 @@ class Solver(object):
         self.d_optimizer.zero_grad()
 
     def distance(self, A, B):
-        return torch.abs(torch.mean(A) - torch.mean(B))
+        return torch.mean(torch.abs(A - B))
 
     def get_individual_distance_loss(self, A_i, A_j, AB_i, AB_j, A_to_AB):
 
