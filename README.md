@@ -145,6 +145,17 @@ SVHN to MNIST:
 
 <img src="images/mnist_to_svhn.png" width="600px">
 
+## Reference
+If you found this code useful, please cite the following paper:
+```
+@inproceedings{Benaim2017OneSidedUD,
+  title={One-Sided Unsupervised Domain Mapping},
+  author={Sagie Benaim and Lior Wolf},
+  booktitle={NIPS},
+  year={2017}
+}
+```
+
 ## Acknowledgements
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant ERC CoG 725974).
 
